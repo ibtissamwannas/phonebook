@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:phonebook/core/constants/colors.dart';
 
 class CustomTextFormField extends StatefulWidget {
   final String hintText;
-  // final String svgPicture;
   final TextEditingController myController;
   final String? Function(String?)? validator;
   final bool isNumber;
   const CustomTextFormField(
       {Key? key,
       required this.hintText,
-      // required this.svgPicture,
       required this.myController,
       this.validator,
       required this.isNumber})
