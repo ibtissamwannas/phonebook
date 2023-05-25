@@ -23,7 +23,7 @@ if (!$emailValid && !$phoneNumberValid) {
 
 if (!empty($errors)) {
     $errorMessage = implode(" and ", $errors);
-    echo json_encode(array("status" => "fail", "messages" => $errorMessage));
+    echo json_encode(array("status" => "fail", "message" => $errorMessage));
 } else {
     $stmt = $con->prepare("UPDATE `contact_information` SET `first_name`=?, `last_name`=?, `phone_number`=?, `email`=? WHERE `id`=?");
     $stmt->execute(array($firstName, $lastName, $phoneNumber, $email, $id));
