@@ -2,11 +2,11 @@
 $dsn = "mysql:host=localhost;dbname=phonebook";
 $user = "root";
 $pass = "";
-$optoion = array(
+$option = array(
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8" //arabic
 );
 try{
-    $con = new PDO($dsn,$user,$pass,$optoion);
+    $con = new PDO($dsn,$user,$pass,$option);
     $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
     header("Access-Control-Allow-Origin: *");
